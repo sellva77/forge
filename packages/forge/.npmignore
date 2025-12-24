@@ -1,0 +1,42 @@
+# Source files
+src/
+tsconfig*.json
+
+# Tests
+test.js
+test_*.js
+*.test.js
+*.spec.js
+__tests__/
+coverage/
+
+# Development files
+.eslintrc*
+.prettierrc*
+.editorconfig
+.vscode/
+.idea/
+
+# Build artifacts (we want dist/, not src/)
+*.log
+*.tsbuildinfo
+
+# Benchmarks
+benchmark.js
+
+# Examples (these are in root, not in package)
+examples/
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Documentation source (built docs are fine)
+docs/
+
+# Misc
+*.md
+!README.md
+.DS_Store
+Thumbs.db

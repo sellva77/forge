@@ -1,0 +1,125 @@
+{
+    "name": "forge-ai",
+    "version": "1.0.0",
+    "description": "🔥 AI Framework for JavaScript — Express-style API for building AI applications with transformers, training, RAG, and agents.",
+    "main": "dist/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./tensor": {
+            "import": "./dist/esm/tensor.js",
+            "require": "./dist/tensor.js",
+            "types": "./dist/tensor.d.ts"
+        },
+        "./transformer": {
+            "import": "./dist/esm/transformer.js",
+            "require": "./dist/transformer.js",
+            "types": "./dist/transformer.d.ts"
+        }
+    },
+    "bin": {
+        "forge": "./bin/cli.js",
+        "forge-ai": "./bin/cli.js"
+    },
+    "files": [
+        "dist",
+        "bin",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "npm run build:cjs && npm run build:esm",
+        "build:cjs": "tsc -p tsconfig.json",
+        "build:esm": "tsc -p tsconfig.esm.json",
+        "dev": "tsc --watch",
+        "test": "node test.js",
+        "test:full": "node test_functionality.js",
+        "benchmark": "node benchmark.js",
+        "prepublishOnly": "npm run build && npm test",
+        "clean": "rimraf dist",
+        "lint": "eslint src --ext .ts",
+        "typecheck": "tsc --noEmit"
+    },
+    "keywords": [
+        "ai",
+        "artificial-intelligence",
+        "machine-learning",
+        "deep-learning",
+        "llm",
+        "large-language-model",
+        "transformer",
+        "gpt",
+        "neural-network",
+        "express",
+        "framework",
+        "javascript",
+        "typescript",
+        "tensor",
+        "training",
+        "inference",
+        "rag",
+        "retrieval-augmented-generation",
+        "agents",
+        "chatbot",
+        "nlp",
+        "natural-language-processing"
+    ],
+    "author": {
+        "name": "Forge AI Team",
+        "email": "team@forge-ai.dev",
+        "url": "https://forge-ai.dev"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/forge-ai/forge.git"
+    },
+    "bugs": {
+        "url": "https://github.com/forge-ai/forge/issues"
+    },
+    "homepage": "https://forge-ai.dev",
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/forge-ai"
+    },
+    "dependencies": {
+        "commander": "^12.1.0"
+    },
+    "optionalDependencies": {
+        "@forge-ai/core": "^1.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "typescript": "^5.6.0",
+        "rimraf": "^6.0.0"
+    },
+    "peerDependencies": {
+        "@forge-ai/core": "^1.0.0"
+    },
+    "peerDependenciesMeta": {
+        "@forge-ai/core": {
+            "optional": true
+        }
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "os": [
+        "darwin",
+        "linux",
+        "win32"
+    ],
+    "cpu": [
+        "x64",
+        "arm64"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    }
+}

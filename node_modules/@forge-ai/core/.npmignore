@@ -1,0 +1,20 @@
+# Source files
+src/
+Cargo.toml
+Cargo.lock
+build.rs
+target/
+
+# Tests
+test.js
+test_*.js
+
+# Development files
+.cargo/
+.rustfmt.toml
+kernels/
+
+# Misc
+*.md
+!README.md
+.DS_Store

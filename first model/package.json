@@ -1,0 +1,14 @@
+{
+    "name": "first-model",
+    "version": "1.0.0",
+    "description": "My first Forge AI model",
+    "type": "module",
+    "main": "model.js",
+    "scripts": {
+        "start": "node model.js",
+        "dev": "node --watch model.js"
+    },
+    "dependencies": {
+        "forge-ai": "file:../packages/forge"
+    }
+}

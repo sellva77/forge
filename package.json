@@ -1,0 +1,51 @@
+{
+    "name": "forge-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "description": "🔥 Forge AI — Monorepo for the JavaScript AI Framework",
+    "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "npm run build --workspaces",
+        "build:core": "npm run build --workspace=@forge-ai/core",
+        "build:forge": "npm run build --workspace=forge-ai",
+        "test": "npm run test --workspaces --if-present",
+        "dev": "npm run dev --workspace=forge-ai",
+        "clean": "npm run clean --workspaces --if-present",
+        "examples": "node examples/01_quickstart.js",
+        "publish:all": "npm publish --workspaces --access public",
+        "version:patch": "npm version patch --workspaces",
+        "version:minor": "npm version minor --workspaces",
+        "version:major": "npm version major --workspaces"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/forge-ai/forge.git"
+    },
+    "keywords": [
+        "ai",
+        "machine-learning",
+        "deep-learning",
+        "llm",
+        "transformer",
+        "framework",
+        "javascript"
+    ],
+    "author": {
+        "name": "Forge AI Team",
+        "email": "team@forge-ai.dev"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/forge-ai/forge/issues"
+    },
+    "homepage": "https://forge-ai.dev",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "devDependencies": {
+        "rimraf": "^6.0.0"
+    }
+}
